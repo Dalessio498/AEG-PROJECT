@@ -1,0 +1,690 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  justify-content: space-between;
+  display: flex;
+  height: 120px;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(255, 185, 32, 0.521);
+  align-items: center;
+  z-index: 1000;
+  background-color: #0000007e;
+  backdrop-filter: blur(10px);
+  font-family: system-ui;
+
+}
+
+header p {
+  position: relative;
+  right: 200px;
+  font-size: 25px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+header li {
+  display: inline-block;
+
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  transition: 0.8s ease;
+}
+
+
+.logo {
+  height: 120px;
+  transition: 0.6s ease;
+}
+
+.logo:hover {
+  scale: 1.05;
+}
+
+.carpro img {
+  width: 40px;
+  height: 40px;
+  transition: 0.6s ease;
+}
+
+header button {
+  padding: 10px 20px;
+  margin-right: 50px;
+  background-color: #ff7300;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(161, 161, 161, 0.521);
+  transition: 0.6s ease;
+}
+
+header button a {
+  color: #f9f9f9;
+  transition: 0.4s ease;
+}
+
+header button:hover {
+  background-color: #ffffff;
+  scale: 1.05;
+  box-shadow: 0px 2px 4px rgba(255, 185, 32, 0.521)
+}
+
+header button:hover a {
+  color: #ff7300;
+  font-weight: 500;
+}
+
+
+.opcoes li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  transition: 0.8s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.opcoes li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff7300;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.opcoes li a:hover {
+  font-size: 20px;
+  color: #ff7300;
+}
+
+.opcoes li a:hover::after {
+  transform: scaleX(1);
+}
+
+.car {
+  width: 40px;
+  height: 40px;
+  transition: 0.6s ease;
+}
+
+.perfil {
+  width: 40px;
+  height: 40px;
+  transition: 0.6s ease;
+}
+
+.car:hover {
+  content: url("Images/carHOVER.svg");
+  border: none;
+}
+
+.perfil:hover {
+  content: url("Images/proHOVER.svg");
+}
+
+
+
+
+
+.Banner {
+  margin-top: 120px;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to right, #1f1f1f, #303030, #646464);
+  color: rgb(235, 235, 235);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system;
+}
+
+.Banner h1,
+h4 {
+  position: relative;
+  bottom: 20px;
+  scale: 1.05;
+}
+
+.Banner h4 {
+  font-size: 14px;
+}
+
+.Banner button {
+  position: relative;
+  top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.6s ease;
+  background-color: #ff7300;
+}
+
+.Banner button a {
+  text-decoration: none;
+  font-family: system-ui;
+  color: #ffffff;
+  font-size: 15px;
+  transition: color 0.6s ease;
+}
+
+.Banner button:hover {
+  background-color: #ffffff;
+  scale: 1.05;
+  box-shadow: 0px 2px 4px rgba(255, 185, 32, 0.521)
+}
+
+.Banner button:hover a {
+  color: #ff7300;
+}
+
+.MarcasDestaque {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  column-gap: 50px;
+  justify-items: center;
+  /* grid encolhe ao conteúdo */
+  width: fit-content;
+  margin: 0 auto;
+
+}
+
+.filho img {
+  display: block;
+  width: 100%;
+  max-width: 170px;
+  filter: brightness(0);
+  transition: 0.6s ease;
+}
+
+.filho img:hover {
+  scale: 1.05;
+}
+
+
+.marcas {
+  text-align: center;
+  padding: 30px 0px;
+  font-family: system-ui, -apple-system;
+  color: #303030;
+  font-size: 30px;
+
+}
+
+.ProdutosDestaque {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 20px;
+  justify-items: center;
+  width: fit-content;
+  max-width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  /* transition: 0.4s ease; */
+  margin-bottom: 100px;
+}
+
+/* .ProdutosDestaque:hover{
+  transform: scale(1.02);
+} */
+
+
+
+
+.gridProdutos {
+  display: grid;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+
+
+.cont {
+  border-radius: 8px;
+  height: 365px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+  font-family: system-ui, -apple-system;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  color: #303030;
+  transition: 0.4s ease;
+  padding-top: 30px;
+}
+
+.cont:hover {
+  transform: scale(1.02);
+  background-color: #303030;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(255, 123, 0, 0.568);
+}
+
+.cont a {
+  text-decoration: none;
+  color: #303030;
+  font-family: system-ui, -apple-system;
+}
+
+.cont img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  position: relative;
+  top: -10px;
+  border-radius: 6px;
+}
+
+.cont h1,
+h2 {
+  font-size: 16px;
+  font-family: system-ui, -apple-system;
+  font-weight: light;
+}
+
+
+
+
+.cont button,
+.contOferta button {
+  position: relative;
+  top: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.6s ease;
+  background-color: #ff7300;
+}
+
+.cont button a,
+.contOferta button a {
+  text-decoration: none;
+  font-family: system-ui;
+  color: #ffffff;
+  font-size: 15px;
+  transition: color 0.6s ease;
+}
+
+.cont button:hover,
+.contOferta button:hover {
+  background-color: #ffffff;
+  scale: 1.05;
+}
+
+.cont button:hover a,
+.contOferta button:hover a {
+  color: #ff7300;
+}
+
+
+
+.contOferta {
+  border-radius: 8px;
+  height: 365px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+  font-family: system-ui, -apple-system;
+  box-shadow: 0 4px 8px rgba(255, 123, 0, 0.568);
+  text-align: center;
+  text-decoration: none;
+  color: #303030;
+  transition: 0.4s ease;
+  padding-top: 30px;
+  scale: 1.05;
+}
+
+.contOferta:hover {
+  transform: scale(1.02);
+  background-color: #303030;
+  color: #ffffff;
+  box-shadow: 0 6px 10px rgba(255, 123, 0, 0.568);
+}
+
+.contOferta :hover {
+  color: #e7e7e7;
+}
+
+.contOferta a {
+  text-decoration: none;
+  color: #303030;
+  font-family: system-ui, -apple-system;
+}
+
+.contOferta img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  position: relative;
+  top: -10px;
+  border-radius: 6px;
+}
+
+.contOferta h1 {
+  font-size: 16px;
+  font-family: system-ui, -apple-system;
+  font-weight: light;
+}
+
+.precoNor {
+  text-decoration: line-through;
+  font-size: 16px;
+  font-family: system-ui, -apple-system;
+  font-weight: light;
+}
+
+.precoOf {
+  font-size: 16px;
+  font-family: system-ui, -apple-system;
+  font-weight: light;
+  color: orange;
+}
+
+
+.Banner2 img {
+  width: 100%;
+}
+
+.ETC {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  width: 100%;
+  padding: 20px 0;
+  column-gap: 40px;
+  background-color: rgba(201, 201, 201, 0.808);
+  align-items: center;
+}
+
+
+.etcfilho {
+  width: 200px;
+  height: 110px;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+.etcfilho a:hover {
+  color: #646464;
+}
+
+
+.etcfilho a {
+  text-decoration: none;
+  color: #303030;
+  font-family: system-ui, -apple-system;
+  font-size: 10px;
+  position: relative;
+  top: 15px;
+  transition: 0.3s ease;
+}
+
+.etcfilho img {
+  scale: 2;
+  margin-bottom: 10px;
+}
+
+
+footer {
+  background-color: rgb(196, 196, 196);
+  padding: 40px 40px;
+  text-align: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  /* remove a bomba */
+}
+
+x footer h1 {
+  color: #f9f9f9;
+}
+
+footer p {
+  font-family: system-ui;
+  font-size: 16px;
+  color: #555;
+}
+
+footer a {
+  color: #919191;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: system-ui;
+
+}
+
+.ul li {
+  list-style: none;
+}
+
+.ul li a {
+  list-style: none;
+  font-size: 16px;
+  transition: all 0.6s ease;
+  font-weight: 700;
+}
+
+.ul li a:hover {
+  color: #ff7300;
+  scale: 1.02;
+  border-bottom: 2px solid #ff7300;
+
+}
+
+.cadastroFoot {
+  background-color: #ff7300;
+  padding: 25px 0;
+  text-align: center;
+}
+
+.cadastroFoot li {
+  list-style: none;
+  padding: 5px;
+  text-align: center;
+}
+
+.cadastroFoot li label {
+  display: block;
+  font-family: system-ui;
+  margin-bottom: 4px;
+  color: #1f1f1f;
+  font-weight: 700;
+}
+
+.cadastroFoot input {
+  border: none;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px rgba(53, 29, 14, 0.185);
+  background-color: #f9f9f9;
+  padding: 4px;
+  width: 300px;
+  height: 30px;
+  transition: 0.6s ease;
+}
+
+.cadastroFoot input:hover,
+.cadastroFoot input:focus {
+  scale: 1.03;
+}
+
+.cadastroFoot p {
+  color: #1f1f1f;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cadastroFoot a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s ease;
+}
+
+.cadastroFoot a:hover {
+  scale: 1.02;
+}
+
+.cadastroFoot button {
+  padding: 8px 16px;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(53, 29, 14, 0.185);
+  font-weight: 500;
+  font-family: system-ui;
+  transition: 0.4s ease;
+}
+
+
+.cadastroFoot button a {
+  color: #ff7300;
+  transition: 0.4s ease;
+}
+
+.cadastroFoot button:hover {
+  background-color: #1f1f1f;
+  scale: 1.06;
+}
+
+.cadastroFoot button:hover a {
+  color: #f9f9f9;
+}
+
+.rodape {
+  margin-top: 50px;
+
+}
+
+.retorno {
+  position: fixed;
+  bottom: 10px;
+  left: 1%
+}
+
+.retorno img {
+  width: 8%;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+/* adicionar um media para 1250px */
+
+/* Produtos Destaque */
+
+@media (max-width: 768px) {
+  .ProdutosDestaque {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1250px) {
+  .ProdutosDestaque {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .ProdutosDestaque {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* ------------------------------------------------------------ */
+
+/* ETC */
+
+@media (max-width: 768px) {
+  .ETC {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .ETC {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1250px) {
+  .ETC {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------ */
+
+/* Marcas destaque */
+
+@media (max-width: 768px) {
+  .MarcasDestaque {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .MarcasDestaque {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1250px) {
+  .MarcasDestaque {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ------------------------------------------------------------ */
+
+@media (max-width: 1600px) {
+  header p {
+    display: none;
+  }
+}
